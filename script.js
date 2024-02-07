@@ -24,9 +24,10 @@ require([
       }
   });
 
-  //Creating a US State Boundary layer from web feature service and displaying the content
+  // Creating a US State Boundary layer from web feature service and displaying the content
   var featureLayer_1 = new FeatureLayer({
       url: "https://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/USA_Boundaries_2022/FeatureServer/1",
+      title: "US Boundaries",
       renderer: {
           type: "simple",
           symbol: {
@@ -49,6 +50,7 @@ require([
 
   var featureLayer_2 = new FeatureLayer({
       url: "https://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/MTBS_Polygons_v1/FeatureServer/0",
+      title: "Forest Fires",
       popupTemplate: {
           title: "{FireName}",
           content: "Acres Burned: {Acres}"
